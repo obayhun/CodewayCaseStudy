@@ -16,7 +16,8 @@ You will see tests folder in the project structure where I sent each dummy event
 
 This endpoint is our second and last endpoint in which we retrieve the summary information from Bigquery table. Writing the query was the toughest challenge for me in this project I created subqueries for daily_new_users, **average_daily_session_duration**, **daily_active_users** and **total_count** and then finally created one more query which groups the data as described in the case study guide.
 
-You will need **key.json** file which is my **Cloud Credential file** and export it as GOOGLE_APPLICATION_CREDENTIALS and then the **.env** file which stores the mysql connection credentials.
+You will need **key.json** file which is my **Cloud Credential file** and export it as GOOGLE_APPLICATION_CREDENTIALS and then the **.env** file which stores the mysql connection credentials. MySQL db connection is enabled through
+all ips. The required files are sent to the HR manager. 
 
 To start the project:
 
