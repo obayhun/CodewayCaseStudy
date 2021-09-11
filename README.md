@@ -21,6 +21,8 @@ Codeway Case Study - Oguz Bayhun
 
 * I don't have prior experience with Google Cloud data pipelining but with dummyEvents without any delays between request and 100% requests has been added succesfully. However i understood that it's not a best practice of course and data pipelining is a must. In my 2 previous workspace they use Kafka for the java backend application. I'm sorry to say that i could not complete this challenging part of making sure every logs safely landing to database. 
 
+* I believe with good coaching and mentorship i can fulfill all of my missing knowledge. 
+
 Thanks for your time and evaluating my study.
 
 --------
