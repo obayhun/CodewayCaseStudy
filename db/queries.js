@@ -2,8 +2,8 @@ const db = require('./connection')
 const { BigQuery } = require('@google-cloud/bigquery');
 const bigquery = new BigQuery();
 
-const datasetId = 'hosana';
-const tableId = 'logs';
+const datasetId = process.env.dataset;
+const tableId = process.env.tableId;
 
 /*
 For this project i created bigquery and sql database however now 
@@ -17,7 +17,7 @@ I used this query below to insert row to MYSQL db on Google Cloud.
 Then i had to export the data as json and upload it to bigquery table. 
 */
 const insertLogSQL = `
-INSERT INTO logs
+INSERT INTO ${tableId}
             (type,
              app_id,
              session_id,
@@ -130,7 +130,7 @@ const queryLog = async () => {
 
     // Wait for the query to finish
     const [rows] = await job.getQueryResults();
-
+    console.log(`Job ${job.id} returned query succesfully.`);
     return rows;
 }
 

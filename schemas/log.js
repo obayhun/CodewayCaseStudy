@@ -15,7 +15,6 @@ const log = {
             city: { type: 'string', minLength: 1 },
             user_id: { type: 'string', minLength: 1,maxLength: 10}
         },
-        required: ["type", "app_id","session_id", "event_name", "event_time", "page", "country", "region", "city", "user_id"]
     }
 }
 

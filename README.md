@@ -1,10 +1,37 @@
 
-Codeway Case Study -- Oguz Bayhun
+Codeway Case Study - Oguz Bayhun
 ================================
+
+## *UPDATES&CHANGES FROM FEEDBACK*
+
+* All of the variables mentioned are now assigned from env file.
+
+* Fastify default logs are removed and traditional javascript logs added for each endpoint. 
+
+* JWT token added for /summary and /log requests. Currently there are no secure authentication, token will return anyway on a post request to /login endpoint with body including username and password. You can access the other endpoints by including the token directly (without Bearer) in request header `codeway-token`.
+
+* Response format is now fixed, no null values. Null is replaced with 0. 
+
+* Node application has been dockerized. 
+
+`docker build . -t obayhun/codeway-interview`
+
+`docker run -p 3000:3000 -d obayhun/codeway-interview`
+
+
+* I don't have prior experience with Google Cloud data pipelining but with dummyEvents without any delays between request and 100% requests has been added succesfully. However i understood that it's not a best practice of course and data pipelining is a must. In my 2 previous workspace they use Kafka for the java backend application. I'm sorry to say that i could not complete this challenging part of making sure every logs safely landing to database. 
+
+Thanks for your time and evaluating my study.
+
+--------
 
 Main goal of this project is to handle thousands of requests coming in short interval. To achieve this goal I used Fastify rather than express as my node js server framework. I think Fastify is the right fit for this case study.  Fastify is around 20% faster than Express in almost every request. It has async/await for all components and by default has secure JSON body-parser.
 
 I defined 2 endpoints and didn't separate them into routes folder since the amount of endpoint required is not many.
+
+## POST /login endpoint:
+
+Dummy login endpoint created to authorize the user with JWT token. Requires username and password in request body.
 
 ## POST /log endpoint:
 

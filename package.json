@@ -12,6 +12,7 @@
     "@google-cloud/bigquery": "^5.7.1",
     "dotenv": "^10.0.0",
     "fastify": "^3.19.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.1"
   }
